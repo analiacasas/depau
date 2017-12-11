@@ -26,10 +26,11 @@ class ColegioController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function crear(request $request)
+    public function crear()
     {
-        $colegio=new colegioModel;
-//        $insertar=colegio->insertar($request);
+      return view('admin.colegio-insertar');
+//        $colegio=new colegioModel;
+////        $insertar=colegio->insertar($request);
     }
 
     /**
