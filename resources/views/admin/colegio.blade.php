@@ -13,6 +13,20 @@
             <div class="col-sm-12">
 
                 <h3 class="heading text-center"> Lista<span class="color2"> Unidades Educativas</span></h3>
+                <div>
+                    <div class="col-sm-10 " >
+                        <aside class="widget search-widget search">
+                            <form class="search form-inline">   <!-- Search Form -->
+                                <div class="input-group ">
+                                    <input type="text" class="form-control" placeholder="SIE Ó NOMBRE ">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button"><i class="fa fa-search fa-fw"></i></button>
+                                    </span>
+                                </div>                                                
+                            </form>  
+                        </aside>
+                    </div>  
+                </div>
                 <div class="row">
                     <div class="col-sm-10 " >
                         <aside class="widget search-widget search">
