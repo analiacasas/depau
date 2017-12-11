@@ -24,9 +24,9 @@ Route::get('colegio', function () {
 Route::get('test', function () {
     return view('test.test');
 });
-Route::get('admin/inicio', function () {
-    return view('ana');
-});
+//Route::get('admin/inicio', function () {
+//    return view('ana');
+//});
 //Route::get('admin/inicio', function () {
 //    //
 //})->name('roy');
