@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-sm-12">
 
-                <h3 class="heading text-center"> Lista<span class="color2"> Colegios</span></h3>
+<!--                <h3 class="heading text-center"> Lista<span class="color2"> Colegios</span></h3>-->
 
                 <div id="cambiar">
                     <div class="col-sm-12 mt-20">
@@ -34,7 +34,8 @@
                                 <label for="contact-number">Tipo de Colegio</label>
                             </div>
                             <p id="status"></p>
-                            <button type="submit" name="submit" class="btn btn-primary">Send Query</button>
+                            <button type="submit" name="submit" class="btn btn-primary pull-left">AGREGAR</button>
+                            <button type="submit" name="submit" class="btn btn-primary pull-right">CANCELAR</button>
                         </form>
                     </div>
                 </div>
