@@ -33,12 +33,12 @@ public function reservasunitarias()
      * 
      */
 
-public function insertar($input)
+public function insertar($nombre,$sie,$provincia,$tipo)
 {
+$this->insert(['nombre'=>$nombre,'sie'=>$sie,'idprovincia'=>$provincia,'estado'=>'1','tipoU'=>$tipo]);
+}
 
-        $this->fill($input)->save();
-
-}    
+   
 public function listar(){
    return $this->with('provincia')->orderBy('nombre')->get();
 }
