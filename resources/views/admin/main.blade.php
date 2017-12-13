@@ -41,7 +41,7 @@
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
             <![endif]-->
-   <script>
+        <script>
             (function(i, s, o, g, r, a, m) {
                 i['GoogleAnalyticsObject'] = r;
                 i[r] = i[r] || function() {
@@ -206,8 +206,11 @@
         <!--Educomp Custom Script-->
         <script src="{{asset('js/main.js')}}" type=text/javascript></script>
 
-        <script src="{{asset('js/color-switch.js')}}" type="text/javascript"></script>
 
+        <script src="{{asset('js/color-switch.js')}}" type="text/javascript"></script>
+        <!-- scripts añadidos personalmente-->
+        <script src="{{asset('js/ruta.js')}}" type=text/javascript></script>
+        <script src="{{asset('js/jquery-2.2.3.min.js')}}" type=text/javascript></script>
     </body>
 
 

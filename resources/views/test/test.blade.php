@@ -112,17 +112,58 @@ ga('send', 'pageview');
                             <br>
                             <div class="clearfix"></div>
                             <div class="clearfix"></div>
-                            <div class="reset-this col-sm-12">
-                                <ul class="ul center-block">
-                                    <li>  <label class="radio "><input id="radio1" type="radio" name="radios" checked><span class="outer"><span class="inner"></span></span>Robert Baratheon</label></li>
-                                    <li> <label class="radio"><input id="radio2" type="radio" name="radios"><span class="outer"><span class="inner"></span></span>Rhaegar Targaryen</label></li>
-                                    <li> <label class="radio"><input id="radio3" type="radio" name="radios"><span class="outer"><span class="inner"></span></span>Lyanna Stark</label></li>
-                                    <li>  <label class="radio"><input id="radio4" type="radio" name="radios"><span class="outer"><span class="inner"></span></span>Tywin Lannister</label></li>
-                                    <li><label class="radio"><input id="radio5" type="radio" name="radios"><span class="outer"><span class="inner"></span></span>Jon Arryn</label></li>
+<!--                            <div class="col-md-12" style="margin-top: 20px">
+                                <div class="row">
+                                    <div class="form-group" style="margin-left: 60px"> 
+                                        <label style="margin-left: 30px"> 
+                                            <img class="img-responsive" src="respuestas dq/45b.PNG" alt="Photo">
 
-                                </ul>
-                            </div>
+                                            <input id="optionsRadios" style="margin-left: 30px" value="222" name="optionsRadios" type="radio">
+                                        </label>
+                                        <label style="margin-left: 30px"> 
+                                            <img class="img-responsive" src="respuestas dq/45c.PNG" alt="Photo">
 
+                                            <input id="optionsRadios" style="margin-left: 30px" value="223" name="optionsRadios" type="radio">
+                                        </label>
+                                        <label style="margin-left: 30px"> 
+                                            <img class="img-responsive" src="respuestas dq/45e.PNG" alt="Photo">
+
+                                            <input id="optionsRadios" style="margin-left: 30px" value="225" name="optionsRadios" type="radio">
+                                        </label>
+                                        <label style="margin-left: 30px"> 
+                                            <img class="img-responsive" src="respuestas dq/45d.PNG" alt="Photo">
+
+                                            <input id="optionsRadios" style="margin-left: 30px" value="224" name="optionsRadios" type="radio">
+                                        </label>
+                                        <label style="margin-left: 30px"> 
+                                            <img class="img-responsive" src="respuestas dq/45a.PNG" alt="Photo">
+
+                                            <input id="optionsRadios" style="margin-left: 30px" value="221" name="optionsRadios" type="radio">
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>-->
+                            <!--                            <div class="reset-this col-sm-12">
+                                                            <ul class="ul center-block">
+                                                                <li>  <label class="radio "><input id="radio1" type="radio" name="radios" checked><span class="outer"><span class="inner"></span></span>Robert Baratheon</label></li>
+                                                                <li> <label class="radio"><input id="radio2" type="radio" name="radios"><span class="outer"><span class="inner"></span></span>Rhaegar Targaryen</label></li>
+                                                                <li> <label class="radio"><input id="radio3" type="radio" name="radios"><span class="outer"><span class="inner"></span></span>Lyanna Stark</label></li>
+                                                                <li>  <label class="radio"><input id="radio4" type="radio" name="radios"><span class="outer"><span class="inner"></span></span>Tywin Lannister</label></li>
+                                                                <li><label class="radio"><input id="radio5" type="radio" name="radios"><span class="outer"><span class="inner"></span></span>Jon Arryn</label></li>
+                            
+                                                            </ul>
+                                                        </div>-->
+                           <div class="reset-this col-sm-12 center-block">
+                                                            <ul class="ul center-block">
+                                                                <li style="display:inline;  margin-right: 40px;" class="center-block"  >  <label class="radio "><input id="radio1" type="radio" name="radios" checked><span class="outer"><span class="inner"></span></span>  <img class="img-responsive" src="respuestas dq/45d.PNG" alt="Photo"></label></li>
+                                                                <li style="display:inline;  margin-right: 40px;" class="center-block" > <label class="radio"><input id="radio2" type="radio" name="radios"><span class="outer"><span class="inner"></span></span> <img class="img-responsive" src="respuestas dq/45b.PNG" alt="Photo"></label></li>
+                                                                <li style="display:inline;  margin-right: 40px;" > <label class="radio"><input id="radio3" type="radio" name="radios"><span class="outer"><span class="inner"></span></span>  <img class="img-responsive" src="respuestas dq/45e.PNG" alt="Photo"></label></li>
+                                                                <li style="display:inline; margin-right: 40px;" >  <label class="radio"><input id="radio4" type="radio" name="radios"><span class="outer"><span class="inner"></span></span>  <img class="img-responsive" src="respuestas dq/45e.PNG" alt="Photo"></label></li>
+                                                                <li style="display:inline;  margin-right: 40px;" style="display:inline;"><label class="radio"><input id="radio5" type="radio" name="radios"><span class="outer"><span class="inner"></span></span>  <img class="img-responsive" src="respuestas dq/45e.PNG" alt="Photo"></label></li>
+                            
+                                                            </ul>
+                                                        </div>
 
                             <div class="author-contact">
                                 <div class="pull-left">

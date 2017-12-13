@@ -230,6 +230,8 @@ blockquote footer{
 .pt-60{padding-top:60px;}
 .pt-80{padding-top:80px;}
 .pt-100{padding-top:100px;}
+/*estilo añadido*/
+.pt-sinpadding{padding-top:20px;}
 
 .pb-20{padding-bottom:20px;}    /* Padding Bottom Classes */
 .pb-40{padding-bottom:40px;}

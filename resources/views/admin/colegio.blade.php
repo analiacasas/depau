@@ -7,16 +7,13 @@
 
 @section('contenido')
 <script src="{{asset('js/colegio.js')}}" type="text/javascript"></script>
-<div class="bgcolor3 pt-100 pb-100">
+<div class="bgcolor3 pt-sinpadding pb-100">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-
 <!--                <h3 class="heading text-center"> Lista<span class="color2"> Colegios</span></h3>-->
-
-                <div id="editar">
+                <div id="editar" style="display: none">
                 </div>
-
                     <div class="row">
                         <div class="col-sm-10 " >
                             <aside class="widget search-widget search">
@@ -34,13 +31,12 @@
                             <aside class="widget search-widget" style="background:#f7f7f7 ; border: none ; box-shadow: none" >
                                 <div class="input-group form-inline " style="background:#f7f7f7" >
                                     <span class="input-group-btn  " >
-                                        <button class=" btn btn-default " type="button" onclick="insertarcolegio();">AÑADIR</button>
+                                        <button class=" btn btn-default " type="button" onclick="insertar();">AÑADIR</button>
                                     </span>
                                 </div> 
                             </aside>
                         </div>
                     </div> 
-
                     <table class="table table-boxed">
                         <thead>
                             <tr>
@@ -65,8 +61,6 @@
                                 <td><a href="javascript:void(0);" class="center-block" onclick="modificar(5)"> <i class="fa fa-close" aria-hidden="true"></i></a></td>
                             </tr>
                             @endforeach
-
-
                         </tbody>
                     </table>
                 </div>

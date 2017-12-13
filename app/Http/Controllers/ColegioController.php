@@ -3,22 +3,22 @@
 namespace App\Http\Controllers;
 
 use App\ColegioModel;
+use App\ProvinciaModel;
 use Illuminate\Http\Request;
 
-class ColegioController extends Controller
-{
+class ColegioController extends Controller {
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+    public function index() {
 //     $colegio=new ColegioModel();
 //     $datos= $colegio->listar();
 //     return view('admin.colegio')->with('colegios',$datos)->paginate(5);
-     $sa= ColegioModel::orderBy('nombre','ASC')->paginate(10);
-    return view('admin.colegio')->with('colegios',$sa);
+        $sa = ColegioModel::orderBy('nombre', 'ASC')->paginate(10);
+        return view('admin.colegio')->with('colegios', $sa);
     }
 
     /**
@@ -26,11 +26,9 @@ class ColegioController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function crear()
-    {
-      return view('admin.colegio-insertar');
-//        $colegio=new colegioModel;
-////        $insertar=colegio->insertar($request);
+    public function mostrarinsertar(Request $request) {
+        $provincias = ProvinciaModel::all();
+        return view('admin.colegio-insertar')->with('provincias', $provincias);
     }
 
     /**
@@ -39,9 +37,9 @@ class ColegioController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
+    public function store(Request $request) {
+      $colegio=new colegioModel;
+        $insertar=$colegio->insertar($nombre,$sie,$provincia,$tipo);
     }
 
     /**
@@ -50,8 +48,7 @@ class ColegioController extends Controller
      * @param  \App\ColegioModel  $colegioModel
      * @return \Illuminate\Http\Response
      */
-    public function show(ColegioModel $colegioModel)
-    {
+    public function show(ColegioModel $colegioModel) {
         //
     }
 
@@ -61,8 +58,7 @@ class ColegioController extends Controller
      * @param  \App\ColegioModel  $colegioModel
      * @return \Illuminate\Http\Response
      */
-    public function edit(ColegioModel $colegioModel)
-    {
+    public function edit(ColegioModel $colegioModel) {
         //
     }
 
@@ -73,8 +69,7 @@ class ColegioController extends Controller
      * @param  \App\ColegioModel  $colegioModel
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, ColegioModel $colegioModel)
-    {
+    public function update(Request $request, ColegioModel $colegioModel) {
         //
     }
 
@@ -84,8 +79,8 @@ class ColegioController extends Controller
      * @param  \App\ColegioModel  $colegioModel
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ColegioModel $colegioModel)
-    {
+    public function destroy(ColegioModel $colegioModel) {
         //
     }
+
 }

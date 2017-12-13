@@ -43,4 +43,6 @@ Route::get('/colegio/inicio','ColegioController@index');
 //Route::post('/colegio/insertar', function () {
 //    return view('admin.colegio-insertar');
 //});
-Route::post('/colegio/insertar','ColegioController@crear');
+Route::GET("insertar-colegio",'ColegioController@mostrarinsertar');
+Route::GET("insertarbd-colegio",'ColegioController@store');
+//Route::resource('ana','ColegioController');
