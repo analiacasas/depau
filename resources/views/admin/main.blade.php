@@ -35,7 +35,8 @@
         <link href='https://fonts.googleapis.com/css?family=Oswald:300,700,400' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,700' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-
+        <script src="{{asset('js/jquery-2.2.3.min.js')}}" type=text/javascript></script>
+           <script src="{{asset('js/jquery.min.js')}}" type="text/javascript"></script>
         <!-- Respond.js and HTML shiv provide HTML5 support in older browsers like IE9 and 8 -->
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
