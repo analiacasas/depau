@@ -39,6 +39,7 @@
         <script src="{{asset('js/jquery-2.2.3.min.js')}}" type=text/javascript></script>
            <script src="{{asset('js/jquery.min.js')}}" type="text/javascript"></script>
            <script src="{{asset('js/ruta.js')}}" type="text/javascript"></script>
+            <meta name="_token" content="{!! csrf_token() !!}" />
         <!-- Respond.js and HTML shiv provide HTML5 support in older browsers like IE9 and 8 -->
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>

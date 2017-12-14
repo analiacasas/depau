@@ -26,9 +26,10 @@ class ColegioController extends Controller {
      *
      * @return \Illuminate\Http\Response
      */
-    public function mostrarinsertar() {
+    public function mostrarinsertar(Request $request) {
         $provincias = ProvinciaModel::all();
         return view('admin.colegio-insertar')->with('provincias', $provincias);
+ 
     }
 
     /**
@@ -38,12 +39,31 @@ class ColegioController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request) {
-      $colegio=new colegioModel;
-        $nombre=$request->get('nombre');
-        $sie=$request->get('sie');
-        $provincia=$request->get('provincia');
-        $tipo=$request->get('colegio');
-        $insertar=$colegio->insertar($nombre,$sie,$provincia,$tipo);
+//        $colegio = new colegioModel;
+//        $nombre = $request->get('nombre');
+//        $sie = $request->get('sie');
+//        $provincia = $request->get('provincia');
+//        $tipo = $request->get('colegio');
+//        $insertar = $colegio->insertar($nombre, $sie, $provincia, $tipo);
+               if ($request->ajax()) {
+//                $result = Mark::create($request->all());
+//                if ($result){
+//                    Session::flash('save','Se ha creado correctamente');
+                   //        $colegio = new colegioModel;
+        $nombre = $request->get('nombre');
+        $sie = $request->get('sie');
+        $provincia = $request->get('provincia');
+        $tipo = $request->get('colegio');
+        $insertar = $colegio->insertar($nombre, $sie, $provincia, $tipo);
+            return response()->json(['success' => 'true']);
+//                } 
+//                else
+//                {
+//                  return response()->json(['success'=>'false']);  
+//                }
+        }else {
+            dd("sdfj");
+        }
     }
 
     /**
