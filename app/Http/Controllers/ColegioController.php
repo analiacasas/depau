@@ -26,7 +26,7 @@ class ColegioController extends Controller {
      *
      * @return \Illuminate\Http\Response
      */
-    public function mostrarinsertar(Request $request) {
+    public function mostrarinsertar() {
         $provincias = ProvinciaModel::all();
         return view('admin.colegio-insertar')->with('provincias', $provincias);
     }
@@ -39,6 +39,10 @@ class ColegioController extends Controller {
      */
     public function store(Request $request) {
       $colegio=new colegioModel;
+        $nombre=$request->get('nombre');
+        $sie=$request->get('sie');
+        $provincia=$request->get('provincia');
+        $tipo=$request->get('colegio');
         $insertar=$colegio->insertar($nombre,$sie,$provincia,$tipo);
     }
 

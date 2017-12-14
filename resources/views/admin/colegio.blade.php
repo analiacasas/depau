@@ -7,6 +7,7 @@
 
 @section('contenido')
 <script src="{{asset('js/colegio.js')}}" type="text/javascript"></script>
+
 <div class="bgcolor3 pt-sinpadding pb-100">
     <div class="container">
         <div class="row">

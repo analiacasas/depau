@@ -2,18 +2,18 @@
     <h4 class="heading">Añadir <span class="color2">Unidad Educativa</span></h4>
     <div class="form-group">
           <label for="contact-email">SIE</label>
-        <input placeholder="SIE" id="contact-email" type="text" class="form-control" id="sie" nombre="sie">
+        <input placeholder="SIE"  type="text" class="form-control" id="sie" name="sie">
       
     </div>
     <div class="form-group">
             <label for="contact-name">Nombre de la Unidad Educativa</label>
-        <input placeholder="NOMBRE" id="contact-name autofocus" type="text" class="form-control" id="nombre" name="nombre">
+        <input placeholder="NOMBRE"  type="text" class="form-control" id="nombre" name="nombre">
     
     </div>
 
     <div class="form-group">
            <label for="contact-number">Provincia</label>
-        <select  class="form-control select2" id="provincia" name="provincia" style="width: 100%;">
+        <select  class="form-control" id="provincia" name="provincia" style="width: 100%;">
             <option value="">-SELECCIONE UNA PROVINCIA-</option>
             @foreach($provincias as $provincia)
             <option value="{{$provincia->id}}">{{$provincia->nombre}}</option>

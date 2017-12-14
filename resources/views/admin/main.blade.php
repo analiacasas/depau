@@ -12,6 +12,7 @@
         <meta name="author" content="">
 
         <title>Dpto. Orientación - UAGRM</title>
+     
 
         <!--Bootstrap Framework Version 3.3.7 --> 
         <link href="{{asset('css/bootstrap.min.css')}}" type="text/css" rel="stylesheet">
@@ -37,12 +38,13 @@
         <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
         <script src="{{asset('js/jquery-2.2.3.min.js')}}" type=text/javascript></script>
            <script src="{{asset('js/jquery.min.js')}}" type="text/javascript"></script>
+           <script src="{{asset('js/ruta.js')}}" type="text/javascript"></script>
         <!-- Respond.js and HTML shiv provide HTML5 support in older browsers like IE9 and 8 -->
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
             <![endif]-->
-        <script>
+<!--        <script>
             (function(i, s, o, g, r, a, m) {
                 i['GoogleAnalyticsObject'] = r;
                 i[r] = i[r] || function() {
@@ -58,7 +60,8 @@
             ga('create', 'UA-79657248-1', 'auto');
             ga('send', 'pageview');
 
-        </script>
+        </script>-->
+   
     </head>
 
     <body>
@@ -168,9 +171,9 @@
 
         <div id="back"><i class="fa fa-angle-up"></i></div>     
 
-
+       <script src="{{asset('js/jquery-2.2.3.min.js')}}" ></script>
         <!--jQuery Version 2.2.1-->
-        <script src="{{asset('js/jquery.min.js')}}" type="text/javascript"></script>
+        <script src="{{asset('js/jquery.min.js')}}" ></script>
 
         <!--Bootstrap Framework version 3.3.7-->
         <script src="{{asset('js/bootstrap.min.js')}}" type="text/javascript"></script>
@@ -210,8 +213,8 @@
 
         <script src="{{asset('js/color-switch.js')}}" type="text/javascript"></script>
         <!-- scripts añadidos personalmente-->
-        <script src="{{asset('js/ruta.js')}}" type=text/javascript></script>
-        <script src="{{asset('js/jquery-2.2.3.min.js')}}" type=text/javascript></script>
+       
+ 
     </body>
 
 

@@ -40,9 +40,6 @@ Route::get('con', 'LoginsController@index');
  * rutas para colegio
  */
 Route::get('/colegio/inicio','ColegioController@index');
-//Route::post('/colegio/insertar', function () {
-//    return view('admin.colegio-insertar');
-//});
-Route::GET("insertar-colegio",'ColegioController@mostrarinsertar');
-Route::GET("insertarbd-colegio",'ColegioController@store');
+Route::get("insertar-colegio",'ColegioController@mostrarinsertar');
+Route::get("insertarbd-colegio",'ColegioController@store');
 //Route::resource('ana','ColegioController');
