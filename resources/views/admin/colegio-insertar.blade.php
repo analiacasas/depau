@@ -1,5 +1,7 @@
 <div class="col-sm-12 mt-20">
     <h4 class="heading">Añadir <span class="color2">Unidad Educativa</span></h4>
+    <form  id="nuevo_colegio"  method="post"  action="agregar_nuevo_colegio">
+        <input type="hidden" name="_token" value="{{ csrf_token() }}" id="token">  
     <div class="form-group">
           <label for="contact-email">SIE</label>
         <input placeholder="SIE"  type="text" class="form-control" id="sie" name="sie">
@@ -33,10 +35,11 @@
                 </select> 
               
             </div>
+  
             <p id="status"></p>
          
             <button type="button" onclick="cancelar()"  class="btn btn-default pull-left">CANCELAR</button>
             <button type="button" onclick="insertarcolegio()"  class="btn btn-default pull-right">AGREGAR</button>
-
+  </form>
     </div>
 </div>

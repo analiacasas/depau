@@ -23,60 +23,25 @@ function insertar() {
 
 }
 function insertarcolegio() {
-//  var nombre = $("#nombre").val();
-//    var sie = $('#sie').val();
-//    var pr = $('#provincia').val();
-//    var colegio = $('#colegio').val();
-////    if (validarcolegio() == true) {
-//    var xhttp = new XMLHttpRequest();
-//    xhttp.onreadystatechange = function() {
-//        if (xhttp.readyState === 4 && xhttp.status === 200) {
-////            var elemento = document.getElementById("editar");
-////            elemento.style.display = 'none';
-////                pagination(1);
-//            alert("Se insertó correctamente: " + nombre);
-//        }
-//    };
-//    xhttp.open("GET",ruta+"insertarbd-colegio", true);
-//    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-//    var datos = "nombre=" + nombre + "&sie=" + sie + "&provincia=" + pr + "&colegio=" + colegio;
-//    xhttp.send(datos);
-////  alert("Se insertó correctamente: " + colegio);
-
-    var nombre = $("#nombre").val();
-    var sie = $("#sie").val();
+    var nombre = $('#nombre').val();
+    var sie = $('#sie').val();
     var pr = $('#provincia').val();
     var colegio = $('#colegio').val();
-    var token = $("input[nombre=_token]").val();
-
-    var route = 'addcolegio';
-    var dataSting = "nombre=" + nombre;
-
-
+    var route = "addcolegio";
+    var token = $("#token").val();
     $.ajax({
-     //  url: ruta+'/addcolegio',
-        url: "{{url('addcolegio')}}",
+        url: ruta + route,
         headers: {'X-CSRF-TOKEN': token},
-        type: 'post ',
-        datatype: 'json',
-        data: dataSting,
-        success: function(data)
-        {
-            if (data.success == 'true')
-            {
-//                document.location.href = '{{ route("mark.index")}}';
-                alert("se insertó correctamente" + nombre);
-            }
-        },
-        error: function(data)
-        {
-
-//            $("#error").html(data.responseJSON.name);
-//            $("#message-error").fadeIn();
+        type: 'POST',
+        dataType: 'html',
+        data: "nombre=" + nombre + "&sie=" + sie + "&provincia=" + pr + "&colegio=" + colegio,
+        success: function(data) {
+            var elemento = document.getElementById("editar");
+            elemento.style.display = 'none';
+            alert("se agregó");
         }
-    })
 
-
+    });
 
 
 }
