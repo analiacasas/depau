@@ -38,15 +38,43 @@ function insertarcolegio() {
         success: function(data) {
             var elemento = document.getElementById("editar");
             elemento.style.display = 'none';
-            alert("se agregó");
+            listProduct();
+            alert("Se agregó correctamente");
         }
 
     });
-
-
 }
 
 function cancelar() {
     var elemento = document.getElementById("editar");
     elemento.style.display = 'none';
 }
+$(document).on("click", ".pagination li a", function(e) {
+    e.preventDefault();
+
+    var url = $(this).attr("href");
+//    alert(url);
+    $.ajax({
+        type: 'get',
+        url: url,
+        success: function(data) {
+            $('#listado').empty().html(data);
+        }
+    });
+
+});
+$(document).ready(function() {
+    listProduct();
+});
+var listProduct = function()
+{
+    $.ajax({
+        type: 'get',
+        url: ruta + "listar",
+        success: function(data) {
+            $('#listado').empty().html(data);
+        }
+    });
+}
+
+

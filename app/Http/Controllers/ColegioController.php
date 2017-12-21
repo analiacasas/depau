@@ -18,7 +18,12 @@ class ColegioController extends Controller {
 //     $datos= $colegio->listar();
 //     return view('admin.colegio')->with('colegios',$datos)->paginate(5);
         $sa = ColegioModel::orderBy('nombre', 'ASC')->paginate(10);
-        return view('admin.colegio')->with('colegios', $sa);
+        return view('admin_index.colegio')->with('colegios', $sa);
+    }
+
+    public function listar() {
+        $sa = ColegioModel::orderBy('nombre', 'ASC')->paginate(10);
+        return view('admin_tables.lista_colegio')->with('colegios', $sa);
     }
 
     /**
@@ -28,7 +33,7 @@ class ColegioController extends Controller {
      */
     public function mostrarinsertar(Request $request) {
         $provincias = ProvinciaModel::all();
-        return view('admin.colegio-insertar')->with('provincias', $provincias);
+        return view('admin_forms.add_colegio')->with('provincias', $provincias);
     }
 
     /**

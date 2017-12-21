@@ -15,29 +15,31 @@
 <!--                <h3 class="heading text-center"> Lista<span class="color2"> Colegios</span></h3>-->
                 <div id="editar" style="display: none">
                 </div>
-                    <div class="row">
-                        <div class="col-sm-10 " >
-                            <aside class="widget search-widget search">
-                                <form class="search form-inline">   <!-- Search Form -->
-                                    <div class="input-group ">
-                                        <input type="text" class="form-control" placeholder="SIE Ó NOMBRE ">
-                                        <span class="input-group-btn">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-search fa-fw"></i></button>
-                                        </span>
-                                    </div>                                                
-                                </form>  
-                            </aside>
-                        </div> 
-                        <div class="col-sm-2" style="background:#f7f7f7 "  >
-                            <aside class="widget search-widget" style="background:#f7f7f7 ; border: none ; box-shadow: none" >
-                                <div class="input-group form-inline " style="background:#f7f7f7" >
-                                    <span class="input-group-btn  " >
-                                        <button class=" btn btn-default " type="button" onclick="insertar();">AÑADIR</button>
+                <div class="row">
+                    <div class="col-sm-10 " >
+                        <aside class="widget search-widget search">
+                            <form class="search form-inline">   <!-- Search Form -->
+                                <div class="input-group ">
+                                    <input type="text" class="form-control" placeholder="SIE Ó NOMBRE ">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button"><i class="fa fa-search fa-fw"></i></button>
                                     </span>
-                                </div> 
-                            </aside>
-                        </div>
+                                </div>                                                
+                            </form>  
+                        </aside>
                     </div> 
+                    <div class="col-sm-2" style="background:#f7f7f7 "  >
+                        <aside class="widget search-widget" style="background:#f7f7f7 ; border: none ; box-shadow: none" >
+                            <div class="input-group form-inline " style="background:#f7f7f7" >
+                                <span class="input-group-btn  " >
+                                    <button class=" btn btn-default " type="button" onclick="insertar();">AÑADIR</button>
+                                </span>
+                            </div> 
+                        </aside>
+                    </div>
+                </div> 
+                <div id="listado"> 
+<!--
                     <table class="table table-boxed">
                         <thead>
                             <tr>
@@ -64,15 +66,17 @@
                             @endforeach
                         </tbody>
                     </table>
-                </div>
-                <div class="col-sm-12">
-                    <nav>
-                        <ul class="pagination">
-                            {!!$colegios->render()!!}
-                        </ul>
-                    </nav>                
+
+                    <div class="col-sm-12">
+                        <nav>
+                            <ul class="pagination">
+                                {!!$colegios->render()!!}
+                            </ul>
+                        </nav>                
+                    </div>-->
                 </div>
             </div>
         </div>
     </div>
-    @endsection
+</div>
+@endsection
