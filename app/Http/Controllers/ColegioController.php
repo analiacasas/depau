@@ -82,6 +82,29 @@ class ColegioController extends Controller {
         //
     }
 
+    public function buscar(request $request)
+    {
+        $colegio=new colegioModel;
+        $buscar=colegio->buscar($request);
+    }
+        public function modificar(request $request)
+    {
+     
+        $colegio = new colegioModel;
+        $nombre = $request->get('nombre');
+        $sie = $request->get('sie');
+        $provincia = $request->get('provincia');
+        $estado = $request->get('estado');
+        $tipo = $request->get('colegio');
+        $modificar = $colegio->modificar($nombre, $sie, $provincia,$estado, $tipo);
+    }
+        public function eliminar(request $request)
+    {
+        $colegio=new colegioModel;
+        $id = $request->get('id');
+        $eliminar=colegio->eliminar($id);
+    }
+
     /**
      * Remove the specified resource from storage.
      *

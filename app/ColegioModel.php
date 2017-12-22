@@ -10,6 +10,7 @@ class ColegioModel extends Model
  protected  $primaryKey="id";
  protected $keyType="integer";
 public $incrementing=false;
+public $timestamps = false;
  protected $fillable=['nombre','sie','idprovincia','estado','tipoU'];
 
 public function postulantescolegio()
@@ -42,5 +43,34 @@ $this->insert(['nombre'=>$nombre,'sie'=>$sie,'idprovincia'=>$provincia,'estado'=
 public function listar(){
    return $this->with('provincia')->orderBy('nombre')->get();
 }
+
+public function buscar($input)
+{
+
+        
+$this->where('sie','like',$input)->orWhere('nombre','like',$input)->get();
+
+
+}
+
+public function modificar($id,$nombre,$sie,$idP,$estado,$tipoU)
+{
+
+        
+
+
+$this->where('id',$id)->update(['nombre'=>$nombre,'sie'=>$sie,'idprovincia'=>$id,'estado'=>$estado,'tipoU'=>$tipoU]);
+
+
+}
+public function eliminar($id)
+{
+
+        
+$this->where('id',$id)->update(['estado'=>'0']);
+
+
+}
+
 
 }
