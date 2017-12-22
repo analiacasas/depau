@@ -35,6 +35,9 @@ Route::get('test', function () {
 //});
 Route::post('/login/store', 'LoginsController@store');
 Route::get('con', 'LoginsController@index');
+/*
+
+/*
 
 /*
  * rutas para colegio
