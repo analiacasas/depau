@@ -35,6 +35,9 @@ class ColegioController extends Controller {
         $provincias = ProvinciaModel::all();
         return view('admin_forms.add_colegio')->with('provincias', $provincias);
     }
+    public function mostrarmodificar(Request $request){
+        return view('admin_forms.modificar_colegio');
+    }
 
     /**
      * Store a newly created resource in storage.

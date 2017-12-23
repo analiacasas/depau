@@ -44,11 +44,25 @@ function insertarcolegio() {
 
     });
 }
+function modificar(val){
+     var elemento = document.getElementById("editar");
+    elemento.style.display = 'block';
+     $.ajax({
+        type: 'get',
+        url: ruta+"modificarcolegio",
+        success: function(data) {
+            $('#editar').empty().html(data);
+        }
+    });
+}
 
 function cancelar() {
     var elemento = document.getElementById("editar");
     elemento.style.display = 'none';
 }
+/*
+ * funcion para no hacer cargar toda la pagina en la funcion de paginar de laravel
+ */
 $(document).on("click", ".pagination li a", function(e) {
     e.preventDefault();
 
@@ -63,8 +77,15 @@ $(document).on("click", ".pagination li a", function(e) {
     });
 
 });
+
 $(document).ready(function() {
+    /*
+     * cuando carga completamente la pagina se ordena que se liste automaticamente
+     */
     listProduct();
+    /*
+     * a medida que se vaya escribiendo sobre el input de busqueda este hará la busqueda y la listará
+     */
     $("#buscar").keyup(function(e) {
         var parametro = $('#buscar').val();
         var token = $("#token").val();
@@ -78,7 +99,7 @@ $(document).ready(function() {
                 type: 'POST',
                 dataType: 'html',
                 data: "buscar=" + parametro,
-               error: function() {
+                error: function() {
                     alert("Error de conexión");
                 },
                 success: function(data) {
@@ -90,6 +111,9 @@ $(document).ready(function() {
 
     });
 });
+/*
+ * Lista un todos los items de la tabla colegio
+ */
 var listProduct = function()
 {
     $.ajax({
@@ -100,9 +124,7 @@ var listProduct = function()
         }
     });
 }
-function buscarlo() {
-    alert("hola ana");
-}
+
 
 
 
