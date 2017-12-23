@@ -65,6 +65,30 @@ $(document).on("click", ".pagination li a", function(e) {
 });
 $(document).ready(function() {
     listProduct();
+    $("#buscar").keyup(function(e) {
+        var parametro = $('#buscar').val();
+        var token = $("#token").val();
+        var route = "buscarcolegio";
+        if (parametro == null || parametro.length == 0 || parametro == '') {
+            listProduct();
+        } else {
+            $.ajax({
+                url: ruta + route,
+                headers: {'X-CSRF-TOKEN': token},
+                type: 'POST',
+                dataType: 'html',
+                data: "buscar=" + parametro,
+               error: function() {
+                    alert("Error de conexión");
+                },
+                success: function(data) {
+                    $('#listado').empty().html(data);
+                }
+
+            });
+        }
+
+    });
 });
 var listProduct = function()
 {
@@ -76,5 +100,9 @@ var listProduct = function()
         }
     });
 }
+function buscarlo() {
+    alert("hola ana");
+}
+
 
 

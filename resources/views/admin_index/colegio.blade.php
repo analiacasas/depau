@@ -20,7 +20,8 @@
                         <aside class="widget search-widget search">
                             <form class="search form-inline">   <!-- Search Form -->
                                 <div class="input-group ">
-                                    <input type="text" class="form-control" placeholder="SIE Ó NOMBRE ">
+                                    <input type="text" class="form-control"  id="buscar" name="buscar" placeholder="SIE Ó NOMBRE ">
+                                     <input type="hidden" name="_token" value="{{ csrf_token() }}" id="token">  
                                     <span class="input-group-btn">
                                         <button class="btn btn-default" type="button"><i class="fa fa-search fa-fw"></i></button>
                                     </span>
@@ -39,41 +40,7 @@
                     </div>
                 </div> 
                 <div id="listado"> 
-<!--
-                    <table class="table table-boxed">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Nombre</th>
-                                <th>SIE</th>
-                                <th>PROVINCIA</th>
-                                <th>TIPO COLEGIO</th>
-                                <th>MODIFICAR</th>
-                                <th>ELIMINAR</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach($colegios as $colegio)
-                            <tr>
-                                <th scope="row">{{$colegio->id}}</th>
-                                <td>{{$colegio->nombre}}</td>
-                                <td>{{$colegio->sie}}</td>
-                                <td>{{$colegio->provincia->nombre}}</td>
-                                <td>{{$colegio->tipoU}}</td>
-                                <td><a href="javascript:void(0);" class="center-block" onclick="modificar(5)"> <i class="fa fa-edit" aria-hidden="true"></i></a></td>
-                                <td><a href="javascript:void(0);" class="center-block" onclick="modificar(5)"> <i class="fa fa-close" aria-hidden="true"></i></a></td>
-                            </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
 
-                    <div class="col-sm-12">
-                        <nav>
-                            <ul class="pagination">
-                                {!!$colegios->render()!!}
-                            </ul>
-                        </nav>                
-                    </div>-->
                 </div>
             </div>
         </div>

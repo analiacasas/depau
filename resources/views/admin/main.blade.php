@@ -12,7 +12,7 @@
         <meta name="author" content="">
 
         <title>Dpto. Orientación - UAGRM</title>
-     
+
 
         <!--Bootstrap Framework Version 3.3.7 --> 
         <link href="{{asset('css/bootstrap.min.css')}}" type="text/css" rel="stylesheet">
@@ -37,9 +37,9 @@
         <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,700' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
         <script src="{{asset('js/jquery-2.2.3.min.js')}}" type=text/javascript></script>
-           <script src="{{asset('js/jquery.min.js')}}" type="text/javascript"></script>
-           <script src="{{asset('js/ruta.js')}}" type="text/javascript"></script>
-            <meta name="_token" content="{!! csrf_token() !!}" />
+        <script src="{{asset('js/jquery.min.js')}}" type="text/javascript"></script>
+        <script src="{{asset('js/ruta.js')}}" type="text/javascript"></script>
+        <meta name="_token" content="{!! csrf_token() !!}" />
         <!-- Respond.js and HTML shiv provide HTML5 support in older browsers like IE9 and 8 -->
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -62,7 +62,7 @@
             ga('send', 'pageview');
 
         </script>-->
-   
+
     </head>
 
     <body>
@@ -172,7 +172,7 @@
 
         <div id="back"><i class="fa fa-angle-up"></i></div>     
 
-       <script src="{{asset('js/jquery-2.2.3.min.js')}}" ></script>
+        <script src="{{asset('js/jquery-2.2.3.min.js')}}" ></script>
         <!--jQuery Version 2.2.1-->
         <script src="{{asset('js/jquery.min.js')}}" ></script>
 
@@ -214,8 +214,8 @@
 
         <script src="{{asset('js/color-switch.js')}}" type="text/javascript"></script>
         <!-- scripts añadidos personalmente-->
-       
- 
+
+
     </body>
 
 

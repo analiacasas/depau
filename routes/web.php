@@ -46,4 +46,4 @@ Route::get('/colegio/inicio','ColegioController@index');//inicio de colegio
 Route::get("showcolegio",'ColegioController@mostrarinsertar'); // mostrar el formulario de agregar
 Route::post('addcolegio','ColegioController@store'); /// ejecutar codigo en la bd para guardar un item
  route::get('listar/{page?}','ColegioController@listar');// listar los item de la tabla colegio
-//Route::resource('ana','ColegioController');
+Route::post('buscarcolegio','ColegioController@buscar'); // envia el parametro de busqueda *request* al controlador
