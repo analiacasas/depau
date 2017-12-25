@@ -5,13 +5,12 @@
         <group>
             <file>file:/C:/xampp/htdocs/depau/routes/web.php</file>
             <file>file:/C:/xampp/htdocs/depau/public/js/colegio.js</file>
+            <file>file:/C:/xampp/htdocs/depau/app/ColegioModel.php</file>
             <file>file:/C:/xampp/htdocs/depau/resources/views/admin_index/colegio.blade.php</file>
-            <file>file:/C:/xampp/htdocs/depau/resources/views/inicio/ini.blade.php</file>
+            <file>file:/C:/xampp/htdocs/depau/resources/views/admin_forms/modificar_colegio.blade.php</file>
             <file>file:/C:/xampp/htdocs/depau/resources/views/admin_forms/add_colegio.blade.php</file>
             <file>file:/C:/xampp/htdocs/depau/resources/views/admin_tables/lista_colegio.blade.php</file>
-            <file>file:/C:/xampp/htdocs/depau/public/js/ruta.js</file>
             <file>file:/C:/xampp/htdocs/depau/app/Http/Controllers/ColegioController.php</file>
-            <file>file:/C:/xampp/htdocs/depau/resources/views/admin/main.blade.php</file>
         </group>
     </open-files>
 </project-private>

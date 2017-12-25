@@ -35,8 +35,12 @@ class ColegioController extends Controller {
         $provincias = ProvinciaModel::all();
         return view('admin_forms.add_colegio')->with('provincias', $provincias);
     }
-    public function mostrarmodificar(Request $request){
-        return view('admin_forms.modificar_colegio');
+
+    public function mostrarmodificar(Request $request) {
+          $provincias = ProvinciaModel::all();
+        $colegio = new colegioModel;
+        $elemento_col = $colegio->elemento_modificar($request->get('id'));
+       return view('admin_forms.modificar_colegio')->with('colegios', $elemento_col)->with('provincias', $provincias);
     }
 
     /**
@@ -66,15 +70,15 @@ class ColegioController extends Controller {
         }
     }
 
-    public function modificar(reques $request) {
+    public function modificar(Request $request) {
 
         $colegio = new colegioModel;
         $nombre = $request->get('nombre');
+        $id = $request->get('id');
         $sie = $request->get('sie');
-        $provincia = $request->get('provincia');
-        $estado = $request->get('estado');
+        $provincia = $request->get('provincia');       
         $tipo = $request->get('colegio');
-        $modificar = $colegio->modificar($nombre, $sie, $provincia, $estado, $tipo);
+        $modificar = $colegio->modificar($id, $nombre, $sie, $provincia, $tipo);
     }
 
     public function eliminar(request $request) {

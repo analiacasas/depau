@@ -44,18 +44,65 @@ function insertarcolegio() {
 
     });
 }
-function modificar(val){
-     var elemento = document.getElementById("editar");
+function modificar(val) {
+    var elemento = document.getElementById("editar");
     elemento.style.display = 'block';
-     $.ajax({
-        type: 'get',
-        url: ruta+"modificarcolegio",
+    var route = 'modificarcolegio';
+    var token = $("#token").val();
+    $.ajax({
+        url: ruta + route,
+        headers: {'X-CSRF-TOKEN': token},
+        type: 'POST',
+        dataType: 'html',
+        data: "id=" + val,
         success: function(data) {
             $('#editar').empty().html(data);
+        }
+
+    });
+}
+function modificarcolegio() {
+    var route = 'modcolegio';
+    var id = $('#nro').val();
+    var nombre = $('#nombre').val();
+    var sie = $('#sie').val();
+    var pr = $('#provincia').val();
+    var colegio = $('#colegio').val();
+    var token = $("#token").val();
+    $.ajax({
+        url: ruta + route,
+        headers: {'X-CSRF-TOKEN': token},
+        type: 'POST',
+        dataType: 'html',
+        data: "nombre=" + nombre + "&sie=" + sie + "&provincia=" + pr + "&colegio=" + colegio + "&id=" + id,
+        error: function() {
+            alert("Error de conexión, intente de nuevo por favor");
+        },
+        success: function(data) {
+            var elemento = document.getElementById("editar");
+            elemento.style.display = 'none';
+            listProduct();
+            alert("Se modificó correctamente Nro: " + id);
         }
     });
 }
 
+function eliminar(val) {
+    var route = 'eliminarcolegio';
+    var token = $("#token").val();
+    $.ajax({
+        url: ruta + route,
+        headers: {'X-CSRF-TOKEN': token},
+        type: 'POST',
+        dataType: 'html',
+        data: "id=" + val,
+        success: function(data) {
+            listProduct();
+            alert("Se eliminó correctamente Nro: " + val);
+        }
+
+    });
+}
 function cancelar() {
     var elemento = document.getElementById("editar");
     elemento.style.display = 'none';

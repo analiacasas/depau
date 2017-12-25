@@ -20,7 +20,7 @@
             <td>{{$colegio->provincia->nombre}}</td>
             <td>{{$colegio->tipoU}}</td>
             <td><a href="javascript:void(0);" class="center-block" onclick="modificar({{$colegio->id}})"> <i class="fa fa-edit" aria-hidden="true"></i></a></td>
-            <td><a href="javascript:void(0);" class="center-block" onclick="modificar({{$colegio->id}})"> <i class="fa fa-close" aria-hidden="true"></i></a></td>
+            <td><a href="javascript:void(0);" class="center-block" onclick="eliminar({{$colegio->id}})"> <i class="fa fa-close" aria-hidden="true"></i></a></td>
         </tr>
         @endforeach
     </tbody>

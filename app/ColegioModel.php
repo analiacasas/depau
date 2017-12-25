@@ -30,7 +30,7 @@ class ColegioModel extends Model {
     }
 
     /*
-     * 
+     * FUNCIONES CREADAS PARA CRUD
      */
 
     public function insertar($nombre, $sie, $provincia, $tipo) {
@@ -42,23 +42,19 @@ class ColegioModel extends Model {
     }
 
     public function buscar($input) {
-
-
-     return   $this->with('provincia')->where('sie', 'like', "%$input%")->orWhere('nombre', 'like', "%$input%")->get();
+        return $this->with('provincia')->where('sie', 'like', "%$input%")->orWhere('nombre', 'like', "%$input%")->get();
     }
 
-    public function modificar($id, $nombre, $sie, $idP, $estado, $tipoU) {
-
-
-
-
-        $this->where('id', $id)->update(['nombre' => $nombre, 'sie' => $sie, 'idprovincia' => $id, 'estado' => $estado, 'tipoU' => $tipoU]);
+    public function modificar($id, $nombre, $sie, $idP, $tipoU) {
+        $this->where('id', $id)->update(['nombre' => $nombre, 'sie' => $sie, 'idprovincia' => $idP, 'tipoU' => $tipoU]);
     }
 
     public function eliminar($id) {
-
-
         $this->where('id', $id)->update(['estado' => '0']);
+    }
+
+    public function elemento_modificar($id) {
+        return $this->where('id', $id)->get();
     }
 
 }

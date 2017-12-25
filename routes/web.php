@@ -44,7 +44,9 @@ Route::get('con', 'LoginsController@index');
  */
 Route::get('/colegio/inicio','ColegioController@index');//inicio de colegio
 Route::get("showcolegio",'ColegioController@mostrarinsertar'); // mostrar el formulario de agregar
-Route::get("modificarcolegio",'ColegioController@mostrarmodificar'); // mostrar el formulario de agregar
+Route::post('modificarcolegio','ColegioController@mostrarmodificar'); // mostrar el formulario de modificar
 Route::post('addcolegio','ColegioController@store'); /// ejecutar codigo en la bd para guardar un item
+Route::post('modcolegio','ColegioController@modificar'); /// ejecutar codigo en la bd para modificar un item
+Route::post('eliminarcolegio','ColegioController@eliminar'); /// dar de baja un item
  route::get('listar/{page?}','ColegioController@listar');// listar los item de la tabla colegio
 Route::post('buscarcolegio','ColegioController@buscar'); // envia el parametro de busqueda *request* al controlador
