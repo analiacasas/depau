@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\loginModel;
+use App\LoginModel;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\View;
 class LoginsController extends Controller

@@ -50,3 +50,6 @@ Route::post('modcolegio','ColegioController@modificar'); /// ejecutar codigo en 
 Route::post('eliminarcolegio','ColegioController@eliminar'); /// dar de baja un item
  route::get('listar/{page?}','ColegioController@listar');// listar los item de la tabla colegio
 Route::post('buscarcolegio','ColegioController@buscar'); // envia el parametro de busqueda *request* al controlador
+/*
+ * rutas para reserva unitaria
+ */
