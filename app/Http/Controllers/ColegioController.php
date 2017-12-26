@@ -22,7 +22,7 @@ class ColegioController extends Controller {
     }
 
     public function listar() {
-        $sa = ColegioModel::orderBy('nombre', 'ASC')->paginate(10);
+        $sa = ColegioModel::where('estado','=',1)->orderBy('nombre', 'ASC')->paginate(10);
         return view('admin_tables.lista_colegio')->with('colegios', $sa)->with('paginar', "si");
     }
 

@@ -38,7 +38,7 @@ class ColegioModel extends Model {
     }
 
     public function listar() {
-        return $this->with('provincia')->orderBy('nombre')->get();
+        return $this->with('provincia')->where('estado',1)->orderBy('nombre')->get();
     }
 
     public function buscar($input) {
