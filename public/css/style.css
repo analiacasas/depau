@@ -217,6 +217,7 @@ blockquote footer{
 .mt-40{margin-top:40px;}
 .mt-60{margin-top:60px;}
 .mt-80{margin-top:80px;}
+.mt-90{margin-top: 0px}/*estilo creado por @analia para la ficha de contacto */
 .mt-100{margin-top:100px;}
 
 .mb-20{margin-bottom:20px;}     /* Margin Bottom Classes */
@@ -1016,7 +1017,7 @@ blockquote footer{
 }
 
 .cta-light-full{
-    background-image: url("../images/cta-background-light.jpg");
+    background-image: url("../images/foot1.jpg");
     overflow: hidden;
     padding: 70px 0;
     background-position: center center;

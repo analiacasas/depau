@@ -87,14 +87,4 @@ class ColegioController extends Controller {
         $eliminar = $colegio->eliminar($id);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\ColegioModel  $colegioModel
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(ColegioModel $colegioModel) {
-        //
-    }
-
 }

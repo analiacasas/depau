@@ -10,10 +10,16 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+/*
+ * Rutas de la página de inicio 
+ */
+Route::get('contacto', function () {
+    return view('inicio.contacto');
+});
 
 
 Route::get('/', function () {
-    return view('inicio/ini');
+    return view('inicio/home');
 });
 Route::get('admin', function () {
     return view('admin.inicio');
